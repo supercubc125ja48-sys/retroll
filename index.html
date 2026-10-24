@@ -209,7 +209,7 @@ cabinetFitObserver.observe(document.querySelector('.cabinet'),{childList:true,ch
 
 requestAnimationFrame(fitCabinetToScreen);// Normal retry advances the current challenge; the visible reset starts a new one.
 const advanceChallenge=$('restart').onclick;
-$('restart').onclick=()=>{challengeRound=0;challengeScore=0;challengeLoot=[0,0,0];challengePrize=null;challengePractice=false;challengeAwarded=false;originalRestart();message('リセットしました。1回目から再挑戦！');};</script></body></html>
+$('restart').onclick=()=>{if(!window.confirm('リセットしてもよろしいですか？\n得点をリセットして、1回目から再挑戦します。'))return;challengeRound=0;challengeScore=0;challengeLoot=[0,0,0];challengePrize=null;challengePractice=false;challengeAwarded=false;originalRestart();message('リセットしました。1回目から再挑戦！');};</script></body></html>
 
 
 
